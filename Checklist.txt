@@ -1,0 +1,35 @@
+Checklist for get_triangle_type Function
+========================================
+
+### Positive Test Cases:
+1. **Equilateral Triangle**
+   - Input: a = 3, b = 3, c = 3
+   - Expected Output: 'equilateral'
+   - Description: All sides are equal.
+
+2. **Isosceles Triangle**
+   - Input: a = 3, b = 3, c = 2
+   - Expected Output: 'isosceles'
+   - Description: Two sides are equal.
+
+3. **Scalene Triangle**
+   - Input: a = 3, b = 4, c = 5
+   - Expected Output: 'nonequilateral'
+   - Description: All sides are different, valid triangle.
+
+### Negative Test Cases:
+4. **Invalid Triangle (Sum of two sides <= third side)**
+   - Input: a = 1, b = 2, c = 3
+   - Expected Output: Exception (IncorrectTriangleSides)
+   - Description: Fails the triangle inequality rule.
+
+5. **Zero Length Side**
+   - Input: a = 0, b = 2, c = 2
+   - Expected Output: Exception (IncorrectTriangleSides)
+   - Description: One side is zero, not a valid triangle.
+
+6. **Negative Side Length**
+   - Input: a = -3, b = 4, c = 5
+   - Expected Output: Exception (IncorrectTriangleSides)
+   - Description: Triangle sides cannot be negative.
+
